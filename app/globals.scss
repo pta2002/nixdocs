@@ -114,6 +114,7 @@ a {
 pre {
   background: var(--color-bg0-soft);
   padding: .5rem;
+  font-family: var(--font-mono);
 
   code {
     .hljs-attr {
@@ -121,7 +122,19 @@ pre {
     }
 
     .hljs-literal {
-      color: var(--color-green-2);
+      color: var(--color-yellow-2);
+    }
+
+    .hljs-comment {
+      color: var(--color-gray);
+    }
+
+    .hljs-string {
+      color: var(--color-green);
+    }
+
+    .hljs-number {
+      color: var(--color-purple-2);
     }
   }
 }

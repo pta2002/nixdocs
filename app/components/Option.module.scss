@@ -1,0 +1,24 @@
+.option {
+  margin-bottom: 1rem;
+
+  >* {
+    margin-bottom: .5rem;
+  }
+
+  .optionName {
+    font-family: var(--font-mono);
+    display: inline-flex;
+    border-bottom: 1px solid var(--color-fg);
+    gap: .5ch;
+    margin-bottom: .5rem;
+
+    &::before {
+      content: '#';
+      color: var(--color-fg4);
+    }
+  }
+
+  .label {
+    font-weight: bold;
+  }
+}
