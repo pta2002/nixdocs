@@ -1,0 +1,127 @@
+:root {
+  /* Colors */
+  --color-bg: #fbf1c7;
+  --color-fg: #3c3836;
+
+  --color-red: #cc241d;
+  --color-green: #98971a;
+  --color-yellow: #d79921;
+  --color-blue: #458588;
+  --color-purple: #b16286;
+  --color-aqua: #689d6a;
+  --color-gray: #7c6f64;
+  --color-orange: #d65d0e;
+
+  --color-gray-2: #928374;
+  --color-red-2: #9d0006;
+  --color-green-2: #79740e;
+  --color-yellow-2: #b57514;
+  --color-blue-2: #076678;
+  --color-purple-2: #8f3f71;
+  --color-aqua-2: #427b58;
+  --color-orange-2: #fe8019;
+
+  --color-bg0-hard: #f9f5d7;
+  --color-bg0-soft: #f2e5bc;
+  --color-fg0: #282828;
+  --color-fg1: #3c3836;
+  --color-fg2: #504945;
+  --color-fg3: #665c54;
+  --color-fg4: #7c6f64;
+  --color-bg0: #fbf1c7;
+  --color-bg1: #ebdbb2;
+  --color-bg2: #d5c4a1;
+  --color-bg3: #bdae93;
+  --color-bg4: #a89984;
+
+  --font-normal: 1rem;
+  --font-medium: 1.2rem;
+  --font-large: 1.5rem;
+  --font-xlarge: 3.1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #282828;
+    --color-fg: #ebdbb2;
+
+    --color-red: #cc241d;
+    --color-green: #98971a;
+    --color-yellow: #d79921;
+    --color-blue: #458588;
+    --color-purple: #b16286;
+    --color-aqua: #689d6a;
+    --color-gray: #928374;
+    --color-orange: #d65d0e;
+
+    --color-gray-2: #a89984;
+    --color-red-2: #fb4934;
+    --color-green-2: #b8bb26;
+    --color-yellow-2: #fabd2f;
+    --color-blue-2: #83a598;
+    --color-purple-2: #d3879b;
+    --color-aqua-2: #8ec07c;
+    --color-orange-2: #fe8019;
+
+    --color-bg0-hard: #1d2021;
+    --color-bg0-soft: #32302f;
+    --color-bg0: #282828;
+    --color-bg1: #3c3836;
+    --color-bg2: #504945;
+    --color-bg3: #665c54;
+    --color-bg4: #7c6f64;
+    --color-fg0: #fbf1c7;
+    --color-fg1: #ebdbb2;
+    --color-fg2: #d5c4a1;
+    --color-fg3: #bdae93;
+    --color-fg4: #a89984;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--color-fg);
+  background: var(--color-bg0-hard);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+.container {
+  max-width: 70ch;
+  margin: 0 auto;
+}
+
+pre {
+  background: var(--color-bg0-soft);
+  padding: .5rem;
+
+  code {
+    .hljs-attr {
+      color: var(--color-blue-2);
+    }
+
+    .hljs-literal {
+      color: var(--color-green-2);
+    }
+  }
+}
