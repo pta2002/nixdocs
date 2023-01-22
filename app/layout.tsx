@@ -29,7 +29,7 @@ export default function RootLayout({
               <Link href="/">Home</Link>
               <Link href="/">Documentation</Link>
               <Link href="/options">Options</Link>
-              <Link href="/">Search</Link>
+              <Link href="/search">Search</Link>
             </nav>
           </header>
 

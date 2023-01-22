@@ -115,6 +115,7 @@ pre {
   background: var(--color-bg0-soft);
   padding: .5rem;
   font-family: var(--font-mono);
+  overflow-x: scroll;
 
   code {
     .hljs-attr {

@@ -1,7 +1,7 @@
 import style from './Option.module.scss'
 import highlight from 'highlight.js'
 
-interface Option {
+export interface Option {
   name: string,
   declarations: string[],
   default: any,
@@ -12,12 +12,12 @@ interface Option {
 }
 
 export default function Option({ option }: { option: Option }) {
-  let exampleHtml;
+  let exampleHtml: string | undefined;
   if (option.example) {
     exampleHtml = highlight.highlight('nix', option.example.toString()).value
   }
 
-  let defaultHtml;
+  let defaultHtml: string | undefined;
   if (option.default !== undefined)
     defaultHtml = highlight.highlight('json', JSON.stringify(option.default)).value
 
@@ -33,7 +33,7 @@ export default function Option({ option }: { option: Option }) {
       <h4>Default:</h4>
 
       <pre>
-        <code className="language-nix" dangerouslySetInnerHTML={{ __html: defaultHtml }} />
+        <code className="language-nix" dangerouslySetInnerHTML={{ __html: defaultHtml as string }} />
       </pre>
     </div>}
 
@@ -42,7 +42,7 @@ export default function Option({ option }: { option: Option }) {
         <h4>Example:</h4>
 
         <pre>
-          <code className="language-nix" dangerouslySetInnerHTML={{ __html: exampleHtml }} />
+          <code className="language-nix" dangerouslySetInnerHTML={{ __html: exampleHtml as string }} />
         </pre>
       </div>}
   </div>
