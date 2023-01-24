@@ -11,6 +11,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.9.0"
+    "@fontsource/fira-code": "^4.5.13",
+    "@fontsource/fira-sans": "^4.5.10",
+    "astro": "^1.9.0",
+    "sass": "^1.57.1"
   }
 }

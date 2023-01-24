@@ -20,6 +20,11 @@
             }];
           };
         };
+
+        devShell = pkgs.mkShell {
+          name = "nvdocs";
+          buildInputs = with pkgs; [ nodejs yarn ];
+        };
       }) // {
     lib.mkDocs =
       { pkgs
@@ -42,6 +47,7 @@
           src = ./.;
           buildPhase = ''
             export HOME=$TMP
+            cp ${docsFile} deps/nvdocs/public/options.json
             yarn --offline build
             mv deps/nvdocs/dist .
           '';
