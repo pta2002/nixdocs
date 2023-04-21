@@ -4,10 +4,13 @@
   inputs.flake-utils.url = "github:numtide/flake-utils";
   inputs.nix-filter.url = "github:numtide/nix-filter";
 
-  outputs = { self, nixpkgs, flake-utils, nix-filter, ... }: flake-utils.lib.eachDefaultSystem
+  inputs.nixvim.url = "github:pta2002/nixvim";
+
+  outputs = { self, nixpkgs, flake-utils, nix-filter, nixvim, ... }: flake-utils.lib.eachDefaultSystem
     (system:
       let
         pkgs = import nixpkgs { inherit system; };
+        lib = pkgs.lib;
       in
       {
         packages.default = self.lib.mkDocs {
@@ -15,9 +18,8 @@
           title = "NixvDocs";
           description = "Simple Nix documentation";
           options = pkgs.lib.evalModules {
-            modules = [{
-              options.test.option = pkgs.lib.mkEnableOption "test option";
-            }];
+            modules = nixvim.rawModules.nixvim;
+            specialArgs = {inherit lib pkgs;};
           };
         };
 
