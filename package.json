@@ -11,9 +11,16 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/solid-js": "^2.1.0",
     "@fontsource/fira-code": "^4.5.13",
     "@fontsource/fira-sans": "^4.5.10",
     "astro": "^1.9.0",
-    "sass": "^1.57.1"
+    "fuse.js": "^6.6.2",
+    "highlight.js": "^11.7.0",
+    "sass": "^1.57.1",
+    "solid-js": "^1.7.3"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11"
   }
 }

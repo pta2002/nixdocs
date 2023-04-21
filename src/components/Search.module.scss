@@ -1,0 +1,15 @@
+.input {
+  margin-top: .2rem;
+  margin-bottom: 1rem;
+
+  width: 100%;
+  padding: .6rem;
+  border: 2px solid var(--color-fg);
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-blue-2);
+  }
+}

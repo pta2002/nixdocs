@@ -1,8 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Option from "../components/Option.astro";
+import Option from "../components/Option";
 ---
 
 <Layout title="Home">
-  <Option name="programs.nixvim.enable" />
+  <Option
+    name="programs.nixvim.enable"
+    description="Enable nixvim!"
+    example={`{ programs.nixvim.enable = true; }`}
+  />
 </Layout>
